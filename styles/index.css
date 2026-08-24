@@ -1,0 +1,297 @@
+/* CSS STYLE PAGE */
+@charset "UTF-8";
+/* 
+  title: index.css
+  author: Veronica Hutchins
+  date: 8/24/2026
+  note: home page styles
+*/
+
+.homepage { 
+    border: none;
+    background-color: #fcfdfd;
+}
+
+h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0.5em;
+    text-align: center;
+    font-size: clamp(2rem, 10vw, 4rem);
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    margin-bottom: 0;
+}
+
+#lastname {
+    display: block;
+    text-transform: uppercase;
+    font-size: 0.4em;
+    letter-spacing: 0.8em;
+    margin-top: 10px;
+}
+
+p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    line-height: 1.7;
+    color: #555;
+    margin: 0.5em auto;
+}
+
+/* --- Profile Image and Container Styling --- */
+#maincontent {
+    display: flex;
+    flex-direction: column-reverse; /* Profile Picture on top on Mobile devices */
+    align-items: center;
+    padding: 20px;
+    gap: 2rem;
+}
+
+#im {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#im img {
+    width: 100%;
+    max-width: 220px; /* Scaled down slightly for mobile */
+    height: auto;
+    border-radius: 50%;
+    border: 6px solid #f0f0f0;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+/* --- Navigation & Interactive UI Buttons --- */
+#homenav {
+    display: flex;
+    flex-direction: column; 
+    gap: 12px;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-btn { 	
+    display: inline-block; 	
+    width: 180px;
+    text-align: center;
+    border: 2px solid transparent; 
+    padding: 0.8em 1.5em; 	
+    border-radius: 25px; 
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); 
+    background-color: #f1f5f9;
+}
+
+/* Dynamic Color Palettes */
+#linka { color: #52667a; border-color: #cbd5e1; } 
+#linkr { color: #026999; border-color: #bae6fd; } 
+#linkc { color: #373758; border-color: #e2e8f0; } 
+#links { color: #1818af; border-color: #b7dbef; } 
+
+.nav-btn:hover {
+    transform: translateY(-3px); 
+    box-shadow: 0 6px 12px rgba(0,0,0,0.12); 
+    filter: brightness(1.05); 
+}
+
+/* --- Gallery & Sections Layout --- */
+#aboutsect, #contactsect {
+    max-width: 850px;
+    margin: 3rem auto;
+    padding: 1.5rem;
+}
+
+#aboutheader, #contactheader {
+    text-align: center;
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.1em;
+    color: #2f3b52;
+}
+
+#aboutsect p {
+    text-align: left;
+    max-width: 750px;
+    margin-bottom: 1.5rem;
+}
+
+/* Center Image Container Gallery */
+.gallery-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Stacks vertically into 1 column on small screens */
+    gap: 20px;
+    margin-top: 2.5rem;
+    width: 100%;
+}
+
+.photo-container picture,
+.photo-container img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;        /* Strips out fixed heights to show the full picture */
+    display: block;
+    border-radius: 12px; /* Keeps your clean rounded borders */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+    object-fit: contain; /* Displays the full uncropped content bounds */
+}
+
+.photo-container {
+    align-items: center;
+}
+
+/* #photo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+} */
+
+picture {
+    margin-bottom: 0.75em;
+}
+
+/* Handle mobile sized screen #photo img */
+img {
+    width: 100%;
+    /* max-width: 220px;  */
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);     
+}
+
+
+/* Small Responsive Sizing Config for Images */
+.gallery-container picture, 
+.gallery-container img {
+    width: 100%; /* Span width of grid */
+    max-width: 100%; /* Scale to screen size */
+    height: 250px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+    object-fit: cover; /* Prevent stretching */
+}
+
+/* --- Contact Section & Footer --- */
+#contactsect p {
+    margin: 1rem auto;
+}
+
+#contactsect a {
+    color: #19a2a7;
+    text-decoration: none;
+    padding: 0.4em 0.8em;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    word-break: break-all;
+}
+
+#contactsect a:hover {
+    color: #ffffff;
+    background-color: #19a2a7;
+}
+
+#homesite {
+    text-align: center;
+    margin: 2rem auto 1rem;
+}
+
+#homesite a {
+    color: #52667a;
+    font-weight: 500;
+}
+
+footer p {
+    font-size: 0.85rem;
+    color: #888;
+}
+
+/* --- Base Mobile Styles (Phones: Less than 600px wide) --- */
+#maincontent {
+    display: flex;
+    flex-direction: column-reverse; /* Keeps image on top for small phones */
+    align-items: center;
+    padding: 20px;
+    gap: 2rem;
+}
+
+/* --- Media Query for Tablets (Between 600px and 992px wide) --- */
+@media screen and (min-width: 600px) and (max-width: 992px) {
+    #maincontent {        
+        gap: 2.5rem;
+    }
+}
+
+/* --- Media Queries (Tablet / Desktop - 768px and above) --- */
+@media screen and (min-width: 768px) {
+    /* Automatically splits into two equal side-by-side columns */
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 30px;
+    }
+
+    .gallery-container picture, 
+    .gallery-container img {
+        height: 300px; /* Slightly taller aspect frame on larger screens */
+    }    
+
+     .gallery-container {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 3; /* Automatically balances width and height to minimize landscape cropping */
+        object-fit: cover;
+    }
+
+    .photo-container {
+        /* height: auto;
+        aspect-ratio: auto;
+        align-items: center; */
+        grid-template-columns: repeat(2, 1fr); /* Splits into side-by-side columns */
+        gap: 30px;
+        align-items: center;
+    }
+}
+
+/* --- Media Query for Desktop (993px wide and up) --- */
+@media screen and (min-width: 993px) {
+    #maincontent {
+        flex-direction: row; /* Returns to side-by-side alignment on large screens */
+        justify-content: center;
+        gap: 4rem;
+        margin: 2rem auto;
+    }
+
+    #im img {
+        max-width: 250px;
+    }
+
+    #homenav {
+        flex-direction: row;
+    }
+
+    #aboutsect, #contactsect {
+        margin: 5rem auto;
+        padding: 2rem;
+    }
+
+    .gallery-container {
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .gallery-container picture, 
+    .gallery-container img {
+        max-width: 380px;
+    }
+
+     .gallery-container {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 3; /* Automatically balances width and height to minimize landscape cropping */
+        object-fit: cover;
+    }
+}
