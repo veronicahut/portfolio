@@ -8,8 +8,5 @@ Welcome! This is my professional portfolio website, showcasing samples of my wor
 - [Resume](resume.html)
 - [Contact](contact.html)
 
-## You can also view the website here:
-## https://veronicahut.github.io/portfolio/index.html
-
 ---
 © Veronica Hutchins
